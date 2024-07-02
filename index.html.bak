@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indonesian Tourism</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="home">
+    <div id="overlay"></div>
+
+    <nav>
+      <div class="container">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="toggle-btn">
+          <img src="img/breadcrumb.png" alt="Breadcrumb" id="breadcrumb" />
+        </label>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#profile">Profile UKM</a></li>
+          <li><a href="#gallery">Gallery Kegiatan</a></li>
+          <li><a href="#registration">Pendaftaran</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <div class="logo-right">
+          <img src="img/logo.png" alt="Logo Universitas Pamulang" />
+        </div>
+      </div>
+    </nav>
+
+    <section id="section-profile">
+      <div id="profile" class="container-section">
+        <h2>Profile UKM</h2>
+        <p>
+          Unit Kegiatan Mahasiswa (UKM) Universitas Pamulang adalah platform
+          bagi mahasiswa untuk mengembangkan minat dan bakat mereka dalam
+          berbagai cabang olahraga, seperti futsal, badminton, taekwondo, voli,
+          panahan, dan catur. UKM ini memberikan kesempatan kepada anggotanya
+          untuk berlatih, bersaing, dan meraih prestasi dalam lingkungan yang
+          mendukung. Dengan fokus pada pembinaan keterampilan, karakter, dan
+          semangat tim, UKM Universitas Pamulang mendorong mahasiswa untuk
+          mencapai potensi terbaik mereka di bidang olahraga, sambil
+          mempromosikan nilai-nilai persaudaraan dan kebersamaan.
+        </p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,64L48,58.7C96,53,192,43,288,64C384,85,480,139,576,133.3C672,128,768,64,864,64C960,64,1056,128,1152,133.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <div id="card-focused" class="gallery-card">
+      <button id="previous-btn" onclick="previousImage()"><</button>
+      <div>
+        <button id="close-btn" onclick="unfocusCard()">x</button>
+        <img src="" alt="" id="img-focused" />
+        <div class="description" id="desc-focused"></div>
+      </div>
+      <button id="next-btn" onclick="nextImage()">></button>
+    </div>
+
+    <section id="section-gallery">
+      <div id="gallery" class="container-section">
+        <h2>Gallery Kegiatan</h2>
+        <div id="gallery-container"></div>
+      </div>
+    </section>
+
+    <section id="section-registration">
+      <div id="registration" class="container-section">
+        <h2>Pendaftaran</h2>
+        <form action="#" method="POST">
+          <label for="nim">NIM</label><br />
+          <input
+            type="text"
+            id="nim"
+            name="nim"
+            required
+            placeholder="Nomor Induk Mahasiswa"
+          /><br /><br />
+
+          <label for="nama">Nama</label><br />
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            required
+            placeholder="Nama Lengkap"
+          /><br /><br />
+
+          <label for="jenis_kelamin">Jenis Kelamin</label><br />
+          <select id="jenis_kelamin" name="jenis_kelamin" required>
+            <option value="" hidden>Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option></select
+          ><br /><br />
+
+          <label for="program_studi">Program Studi</label><br />
+          <select id="program_studi" name="program_studi" required>
+            <option value="" hidden>Pilih Program Studi</option>
+            <option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
+            <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+            <option value="S1 Manajemen">S1 Manajemen</option>
+            <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+            <option value="S1 Hukum">S1 Hukum</option>
+            <option value="S1 Sastra Indonesia">S1 Sastra Indonesia</option>
+            <option value="S1 Sastra Inggris">S1 Sastra Inggris</option></select
+          ><br /><br />
+
+          <label for="ukm">UKM yang akan diikuti</label><br />
+          <select id="ukm" name="ukm" required>
+            <option value="" hidden>Pilih UKM</option>
+            <option value="Futsal">Futsal</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Taekwondo">Taekwondo</option>
+            <option value="Voli">Voli</option>
+            <option value="Panahan">Panahan</option>
+            <option value="Catur">Catur</option></select
+          ><br /><br />
+
+          <label>Pilihan Hari Kegiatan</label><br />
+          <input type="checkbox" id="senin" name="hari[]" value="Senin" />
+          <label for="senin">Senin</label>
+          <input type="checkbox" id="selasa" name="hari[]" value="Selasa" />
+          <label for="selasa">Selasa</label>
+          <input type="checkbox" id="rabu" name="hari[]" value="Rabu" />
+          <label for="rabu">Rabu</label>
+          <input type="checkbox" id="kamis" name="hari[]" value="Kamis" />
+          <label for="kamis">Kamis</label>
+          <input type="checkbox" id="jumat" name="hari[]" value="Jumat" />
+          <label for="jumat">Jumat</label><br /><br />
+
+          <input type="submit" value="Daftar" />
+          <input type="reset" value="Reset" />
+        </form>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,192L60,165.3C120,139,240,85,360,69.3C480,53,600,75,720,101.3C840,128,960,160,1080,160C1200,160,1320,128,1380,112L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <section id="section-contact">
+      <div id="contact" class="container-section">
+        <h2>Kontak</h2>
+        <div id="contact-container"></div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2024 Anggi Irawan. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="db/gallery.js"></script>
+    <script src="db/contact.js"></script>
+  </body>
+</html>
