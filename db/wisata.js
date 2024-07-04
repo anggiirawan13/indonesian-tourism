@@ -37,7 +37,6 @@ const wisata = [
   }
 ];
 
-
 wisata.forEach((data) => {
   let element = document.getElementsByClassName("gallery-container")[0];
   element.innerHTML += `<div class="gallery-card" style="text-align: left;">
