@@ -1,48 +1,64 @@
 const wisata = [
   {
     img: "jogja.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Candi Borobudur<br><b>Lokasi:</b> Magelang, Jawa Tengah<br><b>Deskripsi:</b> Candi Borobudur adalah candi Buddha terbesar di dunia yang dibangun pada abad ke-9. Tempat ini dikenal dengan relief-reliefnya yang indah dan menjadi salah satu warisan budaya dunia UNESCO.<br><b>Aktivitas:</b> Tur candi, menikmati matahari terbit dan terbenam, mempelajari sejarah dan budaya Buddha.",
+    description:
+      "The largest Buddhist temple in the world, known for its beautiful reliefs and as a UNESCO World Heritage site.",
     alt: "Candi Borobudur",
+    nama: "Candi Borobudur",
   },
   {
     img: "raja-ampat.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Raja Ampat<br><b>Lokasi:</b> Papua Barat<br><b>Deskripsi:</b> Raja Ampat adalah surga bagi para penyelam dengan keanekaragaman hayati laut yang luar biasa. Tempat ini terdiri dari sekitar 1.500 pulau kecil, atol, dan beting pasir.<br><b>Aktivitas:</b> Menyelam, snorkeling, berlayar, menjelajahi pulau-pulau.",
+    description:
+      "A paradise for divers with incredible marine biodiversity, consisting of around 1,500 small islands.",
     alt: "Raja Ampat",
+    nama: "Raja Ampat",
   },
   {
     img: "malang.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Gunung Bromo<br><b>Lokasi:</b> Jawa Timur<br><b>Deskripsi:</b> Gunung Bromo adalah salah satu gunung berapi yang paling terkenal di Indonesia. Tempat ini menawarkan pemandangan spektakuler, terutama saat matahari terbit.<br><b>Aktivitas:</b> Mendaki gunung, menikmati pemandangan matahari terbit, berkeliling kawah.",
+    description:
+      "One of the most famous volcanoes in Indonesia, offering spectacular views, especially at sunrise.",
     alt: "Gunung Bromo",
+    nama: "Gunung Bromo",
   },
   {
     img: "bali.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Ubud<br><b>Lokasi:</b> Bali<br><b>Deskripsi:</b> Ubud dikenal sebagai pusat budaya dan seni di Bali. Tempat ini menawarkan berbagai galeri seni, tarian tradisional, dan pemandangan sawah yang menakjubkan.<br><b>Aktivitas:</b> Mengunjungi galeri seni, menonton tarian tradisional, yoga, bersepeda melalui sawah.",
+    description:
+      "Known as the cultural and artistic center of Bali, offering art galleries, traditional dances, and stunning rice fields.",
     alt: "Ubud",
+    nama: "Ubud",
   },
   {
     img: "raja-ampat.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Danau Toba<br><b>Lokasi:</b> Sumatera Utara<br><b>Deskripsi:</b> Danau Toba adalah danau vulkanik terbesar di dunia dan memiliki pulau Samosir di tengahnya. Tempat ini menawarkan pemandangan alam yang indah dan kebudayaan Batak yang unik.<br><b>Aktivitas:</b> Berenang, berlayar, menjelajahi pulau Samosir, mempelajari kebudayaan Batak.",
+    description:
+      "The world's largest volcanic lake with Samosir Island in the middle, offering beautiful scenery and unique Batak culture.",
     alt: "Danau Toba",
+    nama: "Danau Toba",
   },
   {
     img: "lombok.jpg",
-    description: 
-      "<b>Nama Tempat:</b> Taman Nasional Komodo<br><b>Lokasi:</b> Nusa Tenggara Timur<br><b>Deskripsi:</b> Taman Nasional Komodo adalah habitat alami dari komodo, kadal terbesar di dunia. Tempat ini juga menawarkan pemandangan alam yang menakjubkan dan kehidupan bawah laut yang kaya.<br><b>Aktivitas:</b> Trekking untuk melihat komodo, snorkeling, diving, berlayar.",
+    description:
+      "Natural habitat of the Komodo dragon, the largest lizard in the world, with stunning natural scenery and rich marine life.",
     alt: "Taman Nasional Komodo",
-  }
+    nama: "Taman Nasional Komodo",
+  },
 ];
 
 wisata.forEach((data) => {
-  let element = document.getElementsByClassName("gallery-container")[0];
-  element.innerHTML += `<div class="gallery-card" style="text-align: left;">
-    <img src="img/${data.img}" alt="${data.alt}" />
-    <div class="description">
-      ${data.description}
-    </div>
-  </div>`;
+  let element = document.getElementById("row-card-wisata-container");
+  element.innerHTML += `<div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+              <div class="card" style="width: 20rem; height:25rem;">
+                <img
+                  src="img/${data.img}"
+                  class="img-fluid img-thumbnail"
+                  style="width: 100%; height: 15rem"
+                  alt="${data.alt}"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">${data.nama}</h5>
+                  <p class="card-text">
+                    ${data.description}
+                  </p>
+                </div>
+              </div>
+            </div>`;
 });
