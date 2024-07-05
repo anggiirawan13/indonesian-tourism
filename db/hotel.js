@@ -65,7 +65,7 @@ hotel.forEach((data) => {
                   </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a class="btn btn-outline-primary" href="${data.loc}" target="_blank" role="button">Location</a>
+                    <a class="btn btn-outline-primary" href="${data.loc}" target="_blank" role="button"><i class="fa fa-map"></i> Location</a>
                   <button
                     type="button"
                     class="btn btn-outline-success"
@@ -73,7 +73,7 @@ hotel.forEach((data) => {
                     data-bs-target="#booking"
                     onclick="setHotelName('${data.nama}')"
                   >
-                    Booking
+                     <i class="fa fa-pencil"></i> Booking
                   </button>
                 </div>
               </div>
