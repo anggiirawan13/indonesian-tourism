@@ -64,7 +64,7 @@ hotel.forEach((data) => {
                     ${data.description}
                   </p>
                 </div>
-                <div class="card-footer text-center">
+                <div class="card-footer text-center d-flex justify-content-around">
                     <a class="btn btn-outline-primary" href="${data.loc}" target="_blank" role="button"><i class="fa fa-map"></i> Location</a>
                   <button
                     type="button"
